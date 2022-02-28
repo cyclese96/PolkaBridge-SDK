@@ -2,7 +2,7 @@ import JSBI from 'jsbi'
 
 export const FACTORY_ADDRESS = '0xfA8e11D87F9B219e780Ff2Efa4304c8Ef5bFa0E7'
 
-export const INIT_CODE_HASH = '0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f'
+export const INIT_CODE_HASH = '0x8b59d0fbd3a2da5e26f61e1d4b91f355d2c382ec32c993635b0d80dce6e1ef1c'
 
 export const MINIMUM_LIQUIDITY = JSBI.BigInt(1000)
 
@@ -24,7 +24,7 @@ export enum ChainId {
   RINKEBY = 4
 }
 
-export const currentTestChain = ChainId.MATIC // set current test chain id
+export const currentTestChain = ChainId.RINKEBY // set current test chain id
 
 // exports for external consumption
 

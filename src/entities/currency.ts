@@ -16,7 +16,7 @@ export class Currency {
   /**
    * The only instance of the base class `Currency`.
    */
-  public static readonly ETHER: Currency = new Currency(18, 'MATIC', 'Matic')
+  public static readonly ETHER: Currency = new Currency(18, 'ETH', 'Ether') //Todo: set default currency here depeding on current chain ID
 
   /**
    * Constructs an instance of the base class `Currency`. The only instance of the base class `Currency` is `Currency.ETHER`.
