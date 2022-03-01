@@ -1,7 +1,7 @@
 {
   "name": "polkabridge-sdk",
   "license": "MIT",
-  "version": "3.0.5",
+  "version": "1.0.0",
   "description": "🛠 Polkabridge sdk on top of Uniswap V2",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
