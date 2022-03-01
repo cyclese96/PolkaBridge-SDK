@@ -1,6 +1,9 @@
 import JSBI from 'jsbi'
 
-export const FACTORY_ADDRESS = '0xfA8e11D87F9B219e780Ff2Efa4304c8Ef5bFa0E7'
+const testing = true
+export const FACTORY_ADDRESS = testing
+  ? '0xd624C547bCEEB9A0152F64BE4F85416365e3Ba6b'
+  : '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68'
 
 export const INIT_CODE_HASH = '0x8b59d0fbd3a2da5e26f61e1d4b91f355d2c382ec32c993635b0d80dce6e1ef1c'
 
@@ -24,7 +27,7 @@ export enum ChainId {
   RINKEBY = 4
 }
 
-export const currentTestChain = ChainId.RINKEBY // set current test chain id
+export const currentTestChain = testing ? ChainId.RINKEBY : ChainId // set current test chain id
 
 // exports for external consumption
 
