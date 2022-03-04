@@ -1,8 +1,8 @@
 import JSBI from 'jsbi'
 
-const testing = true
+const testing = false
 export const FACTORY_ADDRESS = testing
-  ? '0xd624C547bCEEB9A0152F64BE4F85416365e3Ba6b'
+  ? '0x628cf8e2A079C6D9bDd0293125273F71EA3d74Ec'
   : '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68'
 
 export const INIT_CODE_HASH = '0x8b59d0fbd3a2da5e26f61e1d4b91f355d2c382ec32c993635b0d80dce6e1ef1c'
