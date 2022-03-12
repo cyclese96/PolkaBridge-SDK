@@ -70,5 +70,19 @@ export const WETH: { [index: number]: Token } = {
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [ChainId.BSC]: new Token(
+    ChainId.BSC,
+    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', //BNB address
+    18,
+    'BNB',
+    'Binance Coin'
+  ),
+  [ChainId.BSC_TEST]: new Token(
+    ChainId.BSC_TEST,
+    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd', //BNB testnet address
+    18,
+    'BNB',
+    'Binance Coin'
   )
 }
