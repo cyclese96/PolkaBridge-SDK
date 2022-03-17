@@ -13,7 +13,7 @@ export const FACTORY_ADDRESS: { [index: number]: string } = {
   [ChainId.ETHEREUM]: '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68',
   [ChainId.RINKEBY]: '0x628cf8e2A079C6D9bDd0293125273F71EA3d74Ec',
   [ChainId.BSC]: '',
-  [ChainId.BSC_TEST]: ''
+  [ChainId.BSC_TEST]: '0xAeE1F15957C6c7AbDF245527b6497E96bDB17091'
 }
 
 export const INIT_CODE_HASH = '0x8b59d0fbd3a2da5e26f61e1d4b91f355d2c382ec32c993635b0d80dce6e1ef1c'

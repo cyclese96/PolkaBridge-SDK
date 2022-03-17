@@ -27,7 +27,7 @@ export class Pair {
   public readonly liquidityToken: Token
   private readonly tokenAmounts: [TokenAmount, TokenAmount]
 
-  public static getAddress(tokenA: Token, tokenB: Token, chainId: ChainId): string {
+  public static getAddress(tokenA: Token, tokenB: Token, chainId: number | undefined): string {
     const tokens = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
 
     if (PAIR_ADDRESS_CACHE?.[tokens[0].address]?.[tokens[1].address] === undefined) {
@@ -36,7 +36,7 @@ export class Pair {
         [tokens[0].address]: {
           ...PAIR_ADDRESS_CACHE?.[tokens[0].address],
           [tokens[1].address]: getCreate2Address(
-            FACTORY_ADDRESS?.[chainId],
+            FACTORY_ADDRESS?.[chainId || 1],
             keccak256(['bytes'], [pack(['address', 'address'], [tokens[0].address, tokens[1].address])]),
             INIT_CODE_HASH
           )
@@ -47,7 +47,7 @@ export class Pair {
     return PAIR_ADDRESS_CACHE[tokens[0].address][tokens[1].address]
   }
 
-  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, chainId: ChainId) {
+  public constructor(tokenAmountA: TokenAmount, tokenAmountB: TokenAmount, chainId: number | undefined) {
     const tokenAmounts = tokenAmountA.token.sortsBefore(tokenAmountB.token) // does safety checks
       ? [tokenAmountA, tokenAmountB]
       : [tokenAmountB, tokenAmountA]
