@@ -12,7 +12,7 @@ export enum ChainId {
 export const FACTORY_ADDRESS: { [index: number]: string } = {
   [ChainId.ETHEREUM]: '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68',
   [ChainId.RINKEBY]: '0x628cf8e2A079C6D9bDd0293125273F71EA3d74Ec',
-  [ChainId.BSC]: '',
+  [ChainId.BSC]: '0xDda79Ec4AF818D1e95F0A45B3E7e60461d5228cb',
   [ChainId.BSC_TEST]: '0xAeE1F15957C6c7AbDF245527b6497E96bDB17091'
 }
 
