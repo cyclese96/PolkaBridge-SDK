@@ -57,18 +57,20 @@ export function currencyEquals(currencyA: Currency, currencyB: Currency): boolea
 }
 
 export const WETH: { [index: number]: Token } = {
-  [ChainId.ETHEREUM]: new Token(
-    ChainId.ETHEREUM,
-    '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2',
+  [ChainId.ETHEREUM]: new Token(ChainId.ETHEREUM, '0xc02aaa39b223fe8d0a0e5c4f27ead9083c756cc2', 18, 'ETH', 'Ether'),
+  [ChainId.RINKEBY]: new Token(ChainId.RINKEBY, '0xc778417e063141139fce010982780140aa0cd5ab', 18, 'ETH', 'Ether'),
+  [ChainId.BSC]: new Token(
+    ChainId.BSC,
+    '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', //BNB address
     18,
-    'WETH',
-    'Wrapped Ether'
+    'BNB',
+    'Binance Coin'
   ),
-  [ChainId.RINKEBY]: new Token(
-    ChainId.RINKEBY,
-    '0xc778417e063141139fce010982780140aa0cd5ab',
+  [ChainId.BSC_TEST]: new Token(
+    ChainId.BSC_TEST,
+    '0x094616f0bdfb0b526bd735bf66eca0ad254ca81f', //BNB testnet address
     18,
-    'WETH',
-    'Wrapped Ether'
+    'BNB',
+    'Binance Coin'
   )
 }

@@ -1,9 +1,20 @@
 import JSBI from 'jsbi'
 
-const testing = false
-export const FACTORY_ADDRESS = testing
-  ? '0x628cf8e2A079C6D9bDd0293125273F71EA3d74Ec'
-  : '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68'
+export enum ChainId {
+  MUMBAI = 80001,
+  MATIC = 137,
+  ETHEREUM = 1,
+  RINKEBY = 4,
+  BSC_TEST = 97,
+  BSC = 56
+}
+
+export const FACTORY_ADDRESS: { [index: number]: string } = {
+  [ChainId.ETHEREUM]: '0xf5d8E98ef1f66f1cAb949A2555837FE755fc2D68',
+  [ChainId.RINKEBY]: '0x628cf8e2A079C6D9bDd0293125273F71EA3d74Ec',
+  [ChainId.BSC]: '0xDda79Ec4AF818D1e95F0A45B3E7e60461d5228cb',
+  [ChainId.BSC_TEST]: '0xAeE1F15957C6c7AbDF245527b6497E96bDB17091'
+}
 
 export const INIT_CODE_HASH = '0x8b59d0fbd3a2da5e26f61e1d4b91f355d2c382ec32c993635b0d80dce6e1ef1c'
 
@@ -19,15 +30,6 @@ export const TEN = JSBI.BigInt(10)
 export const _100 = JSBI.BigInt(100)
 export const _997 = JSBI.BigInt(997)
 export const _1000 = JSBI.BigInt(1000)
-
-export enum ChainId {
-  MUMBAI = 80001,
-  MATIC = 137,
-  ETHEREUM = 1,
-  RINKEBY = 4
-}
-
-export const currentTestChain = testing ? ChainId.RINKEBY : ChainId // set current test chain id
 
 // exports for external consumption
 
